@@ -32,7 +32,7 @@ fetch(url).then(
     }
 ).then(
     function(data){
-        let countries =[]; // Skappa en tom array for att behllar lander
+        let countries =[]; // Skappa en tom array for att behållar lander
 
         for (let i = 0; i < 3; i++) {
            let random = Math.floor(Math.random()* data.length);
@@ -59,6 +59,7 @@ Country.prototype.display= function(index) {
 }
 
 //  Konstruktor Country 
+// Skapa en function med img, name, ocg tidzones! 
 
 function Country(_name, _img, _timezones){
     this.img = _img;
@@ -67,7 +68,7 @@ function Country(_name, _img, _timezones){
 }
 
 // Prototype for tidzones
-// Prototype method kan visa spesefik info som vi skapat. 
+// Prototype method kan visa spesefik info som vi skapat. ocg returena till lokal tid! 
 
     Country.prototype.time = function () {
         let date = new Date;      
